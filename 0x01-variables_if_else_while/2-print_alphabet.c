@@ -4,19 +4,16 @@
  *
  * Return: Always 0 (success/correct)
  */
-int main(void)
-
+int main()
 {
-char alphabet;
+    char ch = 'a';
 
-for (alphabet = 'a'; alphabet <= 'z': alphabet++ ) 
-{	
-putchar(alphabet);
+    printf("Alphabets from a - z are: \n");
+    while(ch<='z')
+    {
+        printf("%c\n", ch);
+        ch++;
+    }
+
+    return 0;
 }
-
-putchar('\n');
-
-return (0);
-
-}
-
