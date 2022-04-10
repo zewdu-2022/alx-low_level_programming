@@ -1,2 +1,2 @@
-#!/bin/bin
-gcc -S -masm=intel -Og -fverbose-asm test.c
+#!/bin/bash
+gcc -s -masm=intel $CFILE
