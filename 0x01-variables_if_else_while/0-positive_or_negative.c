@@ -3,12 +3,11 @@
 #include <stdio.h>
 
 /**
- * main -Prints a random numeber and states whether
- *        it is positive, negative, or zero
- *
- *        Return: Always 0.
- 
+ * main - Entry point
+ *        
+ *Return: Always 0 (Success/correct)
  */
+
 int main(void)
 {
 int n;
@@ -16,13 +15,17 @@ int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 
-if (n > 1)
-printf("%d is positive\n", n);
+if (n == 0);
+{
+printf("%1 is zero\n", n);
+}
+
 else if (n < 0)
-printf("%d is negative\n", n);
+{	
+printf("%1 is negative\n", n);
 else 
-
-prigntf("%d is zero\n", n);
-
+{
+prigntf("%1 is positive\n", n);
+}
 return (0);
 }
