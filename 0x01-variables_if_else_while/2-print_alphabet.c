@@ -2,17 +2,21 @@
 /**
  * main - entry point
  *
- * Description: Print the inverse alphabet
- * Return: 0
+ * Return: Always 0 (success/correct)
  */
 int main(void)
+
 {
-int c;
+char alphabet;
 
-for (c = 0; c < 26; ++c)
-putchar("a" + c);
+for (alphabet = "a" alphabet <= "z": alphabet++) 
+{	
+putchar(alphabet);
+}
 
-putchar('\n');
+putchar("\n");
 
 return (0);
+
 }
+
