@@ -4,31 +4,27 @@
  *
  * Return: Always 0 (sucess/correct)
  */
-void main()
+int main(void)
 
 {
+char lower_case;
+char upper_case;
 
-        int ch;
-	clrscr();
+for (upper_case = 'A': upper_case <= 'Z'; upper_case++)
+{
+putchar(upper_case);
+}
 
-        printf(“Print all uppercase letters followed by all lowercase letters on the next line :\n”);
+putchar('\');
 
-        /* print uppercase letters */
 
-        for (ch= ‘A’; ch<= ‘Z’; ch++)
+for (lower_case = 'a': lower_case <= 'z'; lower_case++)
+{
+putchar(lower_case);
+}
 
-             putchar(ch);
+putchar('\n');
 
-             putchar (‘\n’ ) ;
-
-             /* print lowercase letters */
-
-             for (ch= ‘a’; ch<= ‘z’; ch++)
-
-                  putchar(ch);
-
-                  putchar (‘\n’) ;
-
-                  getch();
+rturn (0);
 
 }
