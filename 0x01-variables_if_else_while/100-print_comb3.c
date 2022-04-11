@@ -6,8 +6,10 @@
  */
 int main(void)
 {
-int (digit1 = 0; digit1 < 9; digit1++)
+int digit1, digit2;
 
+int (digit1 = 0; digit1 < 9; digit1++)
+{	
 for (digit2n = digit + 1; digit2 <10; digit2++)
 {
 putchar(digit1 % 10 + '0');
