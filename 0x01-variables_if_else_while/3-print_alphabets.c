@@ -22,6 +22,6 @@ putchar(lower_case);
 
 putchar('\n');
 
-rturn (0) ;
+return (0);
 
 }
