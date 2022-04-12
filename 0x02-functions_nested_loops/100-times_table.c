@@ -7,7 +7,6 @@
  */
 
 void times_table(int n)
-
 {
 	int num, mult, prod;
 
