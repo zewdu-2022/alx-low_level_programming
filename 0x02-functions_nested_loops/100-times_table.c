@@ -6,7 +6,7 @@
  * @n: The value of the times table to be printed.
  */
 
-void times_table(int n)
+void times_table(int n);
 {
 	int row, col;
 	int mult = 0;
