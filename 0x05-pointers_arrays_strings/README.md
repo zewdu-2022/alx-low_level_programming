@@ -1,1 +1,1 @@
-My Pointers, Arrays and Strings in C
+Pointers, arrays strings
