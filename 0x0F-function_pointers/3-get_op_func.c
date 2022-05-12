@@ -1,28 +1,34 @@
-#ifndef FILE_CALC
-#define FILE_CALC
+#include <stdlib.h>
+#include <stdio.h>
+#include "3-calc.h"
 
 /**
- * struct op - Structure op
- * @op: operator
- * @f: function
+ * get_op_func - function pointer
+ * @s: char type string
+ *
+ * Description: struction with operators
+ * Return: pointer to operator and function
  */
-
-typedef struct op
+int (*get_op_func(char *s))(int, int)
 {
-	char *op;
-	int (*f)(int a, int b);
-} op_t;
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	int i = 0;
 
-int op_add(int a, int b);
-
-int op_sub(int a, int b);
-
-int op_mul(int a, int b);
-
-int op_div(int a, int b);
-
-int op_mod(int a, int b);
-
-int (*get_op_func(char *s))(int, int);
-
-#endif
+	while (ops[i].op)
+	{
+		if (*s == *ops[i].op)
+		{
+			return (ops[i].f);
+		}
+		i++;
+	}
+	printf("Error\n");
+	exit(99);
+}
