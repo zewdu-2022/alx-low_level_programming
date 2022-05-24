@@ -8,7 +8,11 @@
  */
 
 int main(void)
+<<<<<<< HEAD
 {i
+=======
+{
+>>>>>>> edb6d30d19e369dda1ff3b189406614dfc936f59
 _putchar('_');
 _putchar('p');
 _putchar('u');
