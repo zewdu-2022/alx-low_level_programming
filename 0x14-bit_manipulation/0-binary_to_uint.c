@@ -1,69 +1,23 @@
 #include "main.h"
-/**
- * _pow - function that return the
- * value of x raised to the power of y
- *
- * @x: parameter to base
- * @y: parameter of pow
- *
- * Return: End program
- */
-int _pow(int x, int y)
-{
-	if (y < 0)
-	{
-		return (-1);
-	}
-	else if (y == 0)
-	{
-		return (1);
-	}
-	else
-	{
-		y--;
-		x = x * _pow(x, y);
-		return (x);
-	}
 
-	return (0);
-}
 /**
- * binary_to_uint - function that converts a binary number to an
- * unsigned int
- *
- * @b: Pointer with the string whit the number to convert
- *
- * Return: The number converted
+ * binary_to_uint - converts a binary number to unsigned int
+ * @b: string containing the binary number
+ * Return: the converted number
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int sum = 0;
-	int i, x, n;
+	int i;
+	unsigned int dec_val = 0;
 
-	if (b == NULL)
-	{
+	if (!b)
 		return (0);
-	}
 
-	n = strlen(b) - 1;
-
-	/* Realizamos la operacion para hallar suma */
-	for (x = 0, i = 0; n >= x; n--)
+	for (i = 0; b[i]; i++)
 	{
-		switch (b[i])
-		{
-			case '1':
-				sum = sum + _pow(2, n);
-				i++;
-				break;
-			case '0':
-				sum = sum + 0;
-				i++;
-				break;
-			default:
-				return (0);
-		}
+		if (b[i] < '0' || b[i] > '1')
+			return (0);
+		dec_val = 2 * dec_val + (b[i] - '0');
 	}
-
-	return (sum);
+	return (dec_val);
 }
