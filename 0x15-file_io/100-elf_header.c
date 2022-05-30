@@ -122,7 +122,7 @@ void print_data(unsigned char *e_ident)
  */
 void print_version(unsigned char *e_ident)
 {
-	printf("  Version:    %d",
+	printf("  Version:                           %d",
 	       e_ident[EI_VERSION]);
 
 	switch (e_ident[EI_VERSION])
